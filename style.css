@@ -6,6 +6,10 @@
     color: white;
 }
 
+:root{
+    --aboutColor: rgb(229, 229, 229);
+}
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: white;
@@ -72,6 +76,8 @@ body{
 
 
 
+
+
 /*__________________________navbar______________________*/
 p{
     width: 14rem;
@@ -109,8 +115,10 @@ p{
     width: 100vw;
     align-items: center;
     justify-content: center;
-    background-color: #ececec;
+    background-color: var(--aboutColor);
     padding-bottom: 4rem;
+
+    border-radius: 0 0 3rem 3rem;
 
 }
 #about{
@@ -146,13 +154,13 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
     gap: 2rem;
 }
 
-canvas{
+#canvas{
     position: absolute;
     left: 0;
     top: 0;
@@ -161,27 +169,22 @@ canvas{
 }
 
 #man{
+    max-width: 40vw;
     animation: floatSpace 20s infinite linear;
-    width: 24rem;
-    transition: 0.3s;
-}
-#man:hover{
-    scale: 1.2;
     transition: 0.3s;
 }
 
+
 #stack-title{
-    position: absolute;
-    top: 3%;
-    font-family: "Fira Code Retina";
-    margin-bottom: 2rem;
     font-size: 4rem;
+    font-family: "Fira Code Retina", serif;
 }
 
 .logos{
+
     height: 3rem;
 }
-#logos, #logos-2{
+#logos-1, #logos-2{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -189,10 +192,54 @@ canvas{
     gap: 2rem;
 }
 
+.logos-info-container{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.13);
+    padding: 0.6rem;
+    border-radius: 3px;
+}
+
+.logos-div{
+    color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logos-img{
+
+    height: 4rem;
+}
+
+.logos-img:hover{
+    filter: drop-shadow(0 0 2rem turquoise);
+}
+
+#picure-and-logo{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
 /*---------------------------CONTACT-----------------------------------*/
 #section3{
-    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
+}
+
+#contact-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 

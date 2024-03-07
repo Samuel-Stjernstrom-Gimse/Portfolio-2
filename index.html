@@ -8,12 +8,14 @@
     <meta name="author" content="Samuel">
     <meta name="description" content="Web dev full stack javascript backend frontend">
     <meta name="keywords" content="HTML, CSS, Typescript">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
+    <script type="module" src="stack.js" defer></script>
+    <script type="module" src="contact.js" defer></script>
 </head>
 <body>
 <div id="navbar">
     <h1 id="name">samuel.dev</h1>
-    <p id="small-pitch">Full-Stack Dev in the making <br> Studying React, TypeScript, CSS, HTML <br> Backend: C# Node.js</p>
+<!--    <p id="small-pitch">Full-Stack Dev in the making <br> Studying React, TypeScript, CSS, HTML <br> Backend: C# Node.js</p>-->
     <div id="menu">
         <a class="menu-nav" id="projects-nav" href=""><h3>projects</h3></a>
         <a class="menu-nav" id="about-nav" href=""><h3>about</h3></a>
@@ -47,28 +49,87 @@
         </p>
     </div>
 </div>
-</section>
 
+</section>
+<div id="fade"></div>
 <section id="section2">
-    <h1 id="stack-title">TECH STACK</h1>
-    <div id="logos-2">
-        <img id="logo-4" class="logos" src="assets/images/tech/react.svg" alt="">
-        <img id="logo-5" class="logos" src="assets/images/tech/Python-logo-notext.svg.png" alt="">
-        <img id="logo-6" class="logos" src="assets/images/tech/rust.png" alt="">
-        <img id="logo-7" class="logos" src="assets/images/tech/csharp.svg" alt="">
-    </div>
-    <img id="man" src="assets/images/tech/man.png" alt="">
-    <div id="logos">
-        <img id="logo-1" class="logos" src="assets/images/tech/ts.svg" alt="">
-        <img id="logo-2" class="logos" src="assets/images/tech/js.svg" alt="">
-        <img id="logo-3" class="logos" src="assets/images/tech/css.svg" alt="">
-        <img id="logo-3-4" class="logos" src="assets/images/tech/3030179.webp" alt="">
-    </div>
+    <h1 id="stack-title">TECH STACK </h1>
+        <div id="picure-and-logo">
+            <div id="logos-2">
+                <div class="logos-div">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">React.js</h3>
+                        <p class="logos-info">A JavaScript library by Facebook for modular and efficient UI development.</p>
+                    </div>
+                    <img id="logo-4" class="logos, logos-img" src="assets/images/tech/react.svg" alt="React.js Logo">
+                </div>
+                <div class="logos-div">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">Python</h3>
+                        <p class="logos-info">A versatile programming language known for its readability and simplicity.</p>
+                    </div>
+                    <img id="logo-5" class="logos, logos-img" src="assets/images/tech/Python-logo-notext.svg.png" alt="Python Logo">
+                </div>
+                <div class="logos-div">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">Rust</h3>
+                        <p class="logos-info">A systems programming language with a focus on safety and performance.</p>
+                    </div>
+                    <img id="logo-6" class="logos, logos-img" src="assets/images/tech/rust.png" alt="Rust Logo">
+                </div>
+                <div class="logos-div">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">C#</h3>
+                        <p class="logos-info ">A modern, object-oriented programming language developed by Microsoft.</p>
+                    </div>
+                    <img id="logo-7" class="logos, logos-img" src="assets/images/tech/csharp.svg" alt="C# Logo">
+                </div>
+            </div>
+
+
+            <img id="man" src="assets/images/tech/man.png" alt="">
+
+
+            <div id="logos-1">
+                <div class="logos-div">
+                    <img id="logo-1" class="logos logos-img" src="assets/images/tech/ts.svg" alt="TypeScript Logo">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">TypeScript</h3>
+                        <p class="logos-info">A superset of JavaScript that adds static typing to the language.</p>
+                    </div>
+                </div>
+                <div class="logos-div">
+                    <img id="logo-2" class="logos logos-img" src="assets/images/tech/js.svg" alt="JavaScript Logo">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">JavaScript</h3>
+                        <p class="logos-info">A versatile scripting language widely used for web development.</p>
+                    </div>
+                </div>
+
+                <div class="logos-div">
+                    <img id="logo-3" class="logos logos-img" src="assets/images/tech/css.svg" alt="CSS Logo">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">CSS</h3>
+                        <p class="logos-info">A styling language used to control the presentation of web documents.</p>
+                    </div>
+                </div>
+
+                <div class="logos-div">
+                    <img id="logo-3-4" class="logos logos-img" src="assets/images/tech/3030179.webp" alt="Node.js Logo">
+                    <div class="logos-info-container">
+                        <h3 class="logos-info">Node.js</h3>
+                        <p class="logos-info">A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side scripting and creating scalable network applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     <canvas id="canvas"></canvas>
 </section>
 <section id="section3">
-
+<h1>Contact</h1>
+    <canvas id="contact-canvas" ></canvas>
 </section>
-
 </body>
 </html>

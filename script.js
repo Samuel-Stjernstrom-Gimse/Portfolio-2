@@ -1,53 +1,92 @@
-"use strict";
 let starArray = [];
 let originalStarArray = [];
-let animationCount = 0;
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const man = document.getElementById('man');
-let animate = false;
-const particleSpeed = 10;
-canvas.height = window.innerHeight * 2;
+let mouseY = 0;
+let mouseX = 0;
+canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
-const getRandomNumberInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const calculateDistance = (x1, y1, x2, y2) => Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+export const getRandomNumberInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+window.addEventListener('mousemove', function (event) {
+    const canvasRect = canvas.getBoundingClientRect();
+    mouseX = event.clientX - canvasRect.left;
+    mouseY = event.clientY - canvasRect.top;
+});
 const getStars = () => {
-    for (let i = 0; i < 3000; i++) {
+    for (let i = 0; i < 100; i++) {
         let star = {
-            x: getRandomNumberInRange(-window.innerWidth * 10, window.innerWidth),
-            y: getRandomNumberInRange(0, window.innerHeight * 10)
+            x: getRandomNumberInRange(0, window.innerWidth),
+            y: getRandomNumberInRange(0, window.innerHeight),
+            velocityX: 0,
+            velocityY: 0
         };
         starArray.push(star);
         originalStarArray.push(star);
     }
 };
-const removeStars = () => {
-    starArray = [];
-};
 console.log(originalStarArray);
 const animationLoop = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    starArray.forEach((star, index) => {
-        ctx.fillStyle = 'rgb(255,255,255)';
+    starArray.forEach((star) => {
+        const distance = calculateDistance(star.x, star.y, mouseX, mouseY);
+        ctx.fillStyle = 'rgb(160,160,160)';
         ctx.fillRect(star.x, star.y, 3, 3);
-        if (animate) {
-            animationCount++;
-            star.x += 4;
-            star.y -= 2;
+        if (distance < 60) {
+            if (star.x > mouseX) {
+                star.velocityX += 0.1;
+            }
+            else {
+                star.velocityX -= 0.1;
+            }
+            if (star.y > mouseY) {
+                star.velocityY += 0.1;
+            }
+            else {
+                star.velocityY -= 0.1;
+            }
         }
-        else if (animationCount > 0) {
-            animationCount -= 0.5;
-            star.x -= 2;
-            star.y += 1;
+        if (star.velocityX > 2) {
+            star.velocityX = 2;
+        }
+        else if (star.velocityX < -2) {
+            star.velocityX = -2;
+        }
+        if (star.velocityY > 2) {
+            star.velocityY = 2;
+        }
+        else if (star.velocityY < -2) {
+            star.velocityY = -2;
+        }
+        if (star.x > canvas.width) {
+            star.velocityX = -star.velocityX;
+        }
+        else if (star.x < 0) {
+            star.velocityX = -star.velocityX;
+        }
+        if (star.y > canvas.height) {
+            star.velocityY = -star.velocityY;
+        }
+        else if (star.y < 0) {
+            star.velocityY = -star.velocityY;
+        }
+        star.x += star.velocityX;
+        star.y += star.velocityY;
+        if (star.velocityX > 0) {
+            star.velocityX -= 0.01;
+        }
+        else if (star.velocityX < 0) {
+            star.velocityX += 0.01;
+        }
+        if (star.velocityY > 0) {
+            star.velocityY -= 0.01;
+        }
+        else if (star.velocityY < 0) {
+            star.velocityY += 0.01;
         }
     });
     requestAnimationFrame(animationLoop);
 };
-man.addEventListener('mouseover', () => {
-    animate = !animate;
-});
-man.addEventListener('mouseout', () => {
-    animate = !animate;
-});
 getStars();
 animationLoop();
 //# sourceMappingURL=script.js.map
