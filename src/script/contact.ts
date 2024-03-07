@@ -1,4 +1,4 @@
-import { getRandomNumberInRange } from './script'
+import { getRandomNumberInRange } from './script.js'
 
 const canvas2 = document.getElementById('contact-canvas') as HTMLCanvasElement
 const ctx2 = canvas2.getContext('2d') as CanvasRenderingContext2D

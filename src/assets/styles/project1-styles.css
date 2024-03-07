@@ -42,6 +42,10 @@ a, a:hover, a:focus, a:active {
     width: 1.5rem;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 /*---------------------------------hero---------------------------------------*/
 
 #hero-section{
@@ -159,4 +163,34 @@ h2{
 .tech-logo:hover{
     scale: 1.1;
     transition: 0.1s;
+}
+
+/*-------------iframe-----------------*/
+#iframe{
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -3;
+}
+
+/*-------------footer--------------*/
+#footer{
+    position: relative;
+}
+
+#next-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10%;
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+
+#next-project-img{
+    height: 4rem;
+    rotate: 180deg;
+    margin-right: 30px;
 }

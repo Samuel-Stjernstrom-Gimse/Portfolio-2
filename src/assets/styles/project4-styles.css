@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, serif;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+/*----------------------------------animation------------------------------------*/
+
+@keyframes vignette {
+    from {height: 60vh;}
+    to {height: 20vh;}
+}
+
+/*------------------------------navbar-----------------------------------------------*/
+
+#navbar {
+    color: ghostwhite;
+    mix-blend-mode: difference;
+    position: fixed;
+    left: 1%;
+    top: 1%;
+    z-index: 3;
+}
+
+#menu {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#name{
+    font-size: 3rem;
+}
+
+.logo-nav{
+    width: 1.5rem;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*---------------------------------hero---------------------------------------*/
+
+#hero-section{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/projects/gen-sim-hero.jpg");
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ffffff;
+    text-align: center;
+}
+
+#project-title{
+    font-size: 8rem;
+}
+.vignette{
+    width: 100vw;
+    position: absolute;
+    animation: vignette 1s linear;
+    height: 20vh;
+    background-color: #000000;
+}
+
+#vignette-bottom{
+    bottom: 0;
+}
+
+#vignette-top{
+    top: 0;
+}
+
+#back-arrow{
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #cccaca;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    z-index: 1;
+    gap: 1rem;
+}
+
+#arrow-img{
+    height: 30px;
+    width: 30px;
+}
+
+/*------------------------------------project-info-----------------------------------*/
+
+#project-info{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5% 20% 5% 10%;
+    gap: 3rem;
+    background-color: #cccaca;
+}
+
+#text{
+    display: flex;
+    flex-direction: column;
+}
+
+#project-showcase{
+    height: 50vh;
+}
+#key-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: 2;
+    grid-row: 2;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.text-wrapper{
+    padding: 4px;
+    font-weight: lighter;
+}
+h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.feature{
+    padding: 15px;
+    background-color: rgba(9, 9, 9, 0.63);
+    border-radius: 5px;
+    color: #e6e6e6;
+}
+
+#tech-stack-section{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+
+}
+
+.tech-logo{
+    height: 2rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.tech-logo:hover{
+    scale: 1.1;
+    transition: 0.1s;
+}
+
+/*-------------iframe-----------------*/
+#iframe{
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -3;
+}
+
+/*-------------footer--------------*/
+#footer{
+    position: relative;
+}
+
+#next-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10%;
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+
+#next-project-img{
+    height: 4rem;
+    rotate: 180deg;
+    margin-right: 30px;
+}

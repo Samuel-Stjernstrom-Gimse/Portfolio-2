@@ -95,7 +95,6 @@ body{
     transition: 0.2s;
     font-family: "Roboto Thin", serif;
     text-align: right;
-    -webkit-text-stroke: 4px  red;
     cursor: pointer;
     animation: rotateInn 1s linear;
     animation-iteration-count:1 ;
