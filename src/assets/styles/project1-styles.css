@@ -52,12 +52,12 @@ a, a:hover, a:focus, a:active {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-image: url("../images/projects/atom-sim-hero.jpg");
+    background-image: url("../images/projects/math-cube-hero.jpeg");
     background-size: cover;
     align-items: center;
     justify-content: center;
     display: flex;
-    color: #cccaca;
+    color: #ffffff;
 }
 
 #project-title{

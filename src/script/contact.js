@@ -26,7 +26,7 @@ const getSquares = (maxHeight, color, array, num) => {
         array.push(square);
     }
 };
-function renderSquares(array) {
+const renderSquares = (array) => {
     array.forEach((square) => {
         if (square.h === 0)
             square.h = -getRandomNumberInRange(canvas2.height / (square.maxHeightDivider + 2), canvas2.height / square.maxHeightDivider);
@@ -43,7 +43,7 @@ function renderSquares(array) {
         ctx2.fillStyle = square.color;
         ctx2.fillRect(square.x, square.y, canvas2.width / square.num + 2, square.h);
     });
-}
+};
 getSquares(8, 'rgb(229, 229, 229)', squareArrayLayer1, 20);
 getSquares(6, 'rgb(109,109,109)', squareArrayLayer2, 20);
 getSquares(5, 'rgb(62,60,60)', squareArrayLayer3, 20);

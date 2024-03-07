@@ -1,11 +1,15 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, serif;
 }
 
-:root{
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
     --aboutColor: rgb(229, 229, 229);
 }
 
@@ -14,14 +18,16 @@ a, a:hover, a:focus, a:active {
     color: white;
 }
 
-body{
+body {
     background-color: #000000;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
+
 /*-------------------ANIMATIONS-----------------------------------*/
+
 @keyframes floatSpace {
     20% {
         transform: scale(1.039) translateX(-1%);
@@ -37,25 +43,24 @@ body{
     80% {
         transform: scale(0.9897) translateX(2%);
     }
-    100% {
 
-    }
+    100% { }
 }
 
 @keyframes floatSpaceSubtle {
     20% {
-        transform:  translateX(-2.30%) translateY(-2.30%);
+        transform: translateX(-2.30%) translateY(-2.30%);
         rotate: 1deg;
     }
     40% {
-        transform:  translateX(4.60%) translateY(4.60%);
+        transform: translateX(4.60%) translateY(4.60%);
     }
     60% {
-        transform:  translateX(-2.30%) translateY(-2.30%);
+        transform: translateX(-2.30%) translateY(-2.30%);
         rotate: -2deg;
     }
     80% {
-        transform:  translateX(4.60%) translateY(4.60%);
+        transform: translateX(4.60%) translateY(4.60%);
     }
     100% {
 
@@ -63,20 +68,31 @@ body{
 }
 
 @keyframes topDown {
-    from {transform: translateY(-1000px) rotateY(20deg); opacity: 0}
-    to {transform: rotateY(0deg) translateY(0); opacity: 1}
+    from {
+        transform: translateY(-1000px) rotateY(20deg);
+        opacity: 0
+    }
+    to {
+        transform: rotateY(0deg) translateY(0);
+        opacity: 1
+    }
 }
+
 @keyframes rotateInn {
-    from {transform:  rotateY(40deg); }
-    to {transform: rotateY(-50deg)}
+    from {
+        transform: rotateY(40deg);
+    }
+    to {
+        transform: rotateY(-50deg)
+    }
 }
 
+/* ---| Projects |--------------------------------------------------------------------------------------------------- */
 
-/*_______________________________projects____________________________*/
 #text {
     position: relative;
     animation: topDown 1s linear;
-    animation-iteration-count:1 ;
+    animation-iteration-count: 1;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -91,28 +107,24 @@ body{
 }
 
 .project-text {
-    transform: rotateY(-50deg) ;
+    transform: rotateY(-50deg);
     transition: 0.2s;
     font-family: "Roboto Thin", serif;
     text-align: right;
     cursor: pointer;
     animation: rotateInn 1s linear;
-    animation-iteration-count:1 ;
+    animation-iteration-count: 1;
     z-index: 2;
-
 }
 
-.project-text:hover{
+.project-text:hover {
     transition: 0.2s;
     transform: rotateY(10deg);
 }
 
-
-
-
-
 /*__________________________navbar______________________*/
-p{
+
+p {
     width: 14rem;
     color: #cccaca;
 }
@@ -133,16 +145,17 @@ p{
     gap: 20px;
 }
 
-#name{
+#name {
     font-size: 3rem;
 }
 
-.logo-nav{
+.logo-nav {
     width: 1.5rem;
 }
 
 /*------------------about--------------------------------*/
-#section1{
+
+#section1 {
     position: relative;
     display: flex;
     width: 100vw;
@@ -151,9 +164,9 @@ p{
     background-color: var(--aboutColor);
     padding-bottom: 4rem;
     border-radius: 0 0 3rem 3rem;
-
 }
-#about{
+
+#about {
     gap: 4rem;
     width: 70%;
     display: flex;
@@ -161,23 +174,25 @@ p{
     justify-content: center;
     z-index: 1;
 }
-#profile-pic-img{
+
+#profile-pic-img {
     z-index: 2;
     width: 40%;
 }
+
 #about-text {
     font-size: 1.5rem;
     color: #0e0e0e;
     width: 35rem;
 }
 
-#about-text-section{
+#about-text-section {
     padding-top: 6rem;
     display: flex;
     align-items: center;
 }
 
-#about-transition{
+#about-transition {
     position: absolute;
     top: 0;
     width: 100vw;
@@ -185,7 +200,8 @@ p{
 }
 
 /*------------------techStack---------------*/
-#section2{
+
+#section2 {
     position: relative;
     display: flex;
     align-items: center;
@@ -196,7 +212,7 @@ p{
     gap: 2rem;
 }
 
-#canvas{
+#canvas {
     position: absolute;
     left: 0;
     top: 0;
@@ -204,23 +220,24 @@ p{
     z-index: -1;
 }
 
-#man{
+#man {
     max-width: 50vw;
     animation: floatSpace 20s infinite linear;
     transition: 0.3s;
 }
 
 
-#stack-title{
+#stack-title {
     font-size: 4rem;
     font-family: "Fira Code Retina", serif;
 }
 
-.logos{
+.logos {
 
     height: 3rem;
 }
-#logos-1, #logos-2{
+
+#logos-1, #logos-2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -228,7 +245,7 @@ p{
     gap: 2rem;
 }
 
-.logos-info-container{
+.logos-info-container {
     display: flex;
     flex-direction: column;
     visibility: hidden;
@@ -237,7 +254,7 @@ p{
     border-radius: 3px;
 }
 
-.logos-div{
+.logos-div {
     color: red;
     display: flex;
     flex-direction: row;
@@ -246,32 +263,29 @@ p{
     gap: 10px;
 }
 
-.logos-img{
+.logos-img {
 
     height: 4rem;
 }
+
 .floatSpaceSubtle {
     animation: floatSpaceSubtle 10s linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-.logos-img:hover{
+.logos-img:hover {
     filter: drop-shadow(0 0 2rem turquoise);
 }
 
-#picure-and-logo{
+#picture-and-logo {
     display: flex;
     flex-direction: row;
 }
 
-
-
-
 /*---------------------------CONTACT-----------------------------------*/
 
-
-#contact-canvas{
+#contact-canvas {
     position: absolute;
     top: 0;
     left: 0;
@@ -279,12 +293,7 @@ p{
     image-rendering: crisp-edges;
 }
 
-#footer{
+#footer {
     height: 3rem;
     background-color: #cccaca;
 }
-
-
-
-
-

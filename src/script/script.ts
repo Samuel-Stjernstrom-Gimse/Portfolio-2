@@ -21,6 +21,7 @@ type Star = {
 	velocityX: number
 	velocityY: number
 }
+
 window.addEventListener('mousemove', function (event) {
 	// Get the position of the canvas relative to the viewport
 	const canvasRect = canvas.getBoundingClientRect()
@@ -29,6 +30,7 @@ window.addEventListener('mousemove', function (event) {
 	mouseX = event.clientX - canvasRect.left
 	mouseY = event.clientY - canvasRect.top
 })
+
 const getStars = () => {
 	for (let i = 0; i < 100; i++) {
 		let star: Star = {
@@ -41,8 +43,6 @@ const getStars = () => {
 		originalStarArray.push(star)
 	}
 }
-
-console.log(originalStarArray)
 
 const animationLoop = () => {
 	ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -125,3 +125,19 @@ function applyRandomAnimation() {
 
 // Apply the random animation delays on page load
 window.onload = applyRandomAnimation
+
+console.log(
+	'%c         _            _                  _   _        _                  _            _     \n' +
+		'       / /\\         / /\\               /\\_\\/\\_\\ _   /\\_\\               /\\ \\         _\\ \\   \n' +
+		'      / /  \\       / /  \\             / / / / //\\_\\/ / /         _    /  \\ \\       /\\__ \\  \n' +
+		'     / / /\\ \\__   / / /\\ \\           /\\ \\/ \\ \\/ / /\\ \\ \\__      /\\_\\ / /\\ \\ \\     / /_ \\_\\ \n' +
+		'    / / /\\ \\___\\ / / /\\ \\ \\         /  \\____\\__/ /  \\ \\___\\    / / // / /\\ \\_\\   / / /\\/_/ \n' +
+		'    \\ \\ \\ \\/___// / /  \\ \\ \\       / /\\/________/    \\__  /   / / // /_/_ \\/_/  / / /      \n' +
+		'     \\ \\ \\     / / /___/ /\\ \\     / / /\\/_// / /     / / /   / / // /____/\\    / / /       \n' +
+		' _    \\ \\ \\   / / /_____/ /\\ \\   / / /    / / /     / / /   / / // /\\____\\/   / / / ____   \n' +
+		'/_/\\__/ / /  / /_________/\\ \\ \\ / / /    / / /     / / /___/ / // / /______  / /_/_/ ___/\\ \n' +
+		'\\ \\/___/ /  / / /_       __\\ \\_\\\\/_/    / / /     / / /____\\/ // / /_______\\/_______/\\__\\/ \n' +
+		' \\_____\\/   \\_\\___\\     /____/_/        \\/_/      \\/_________/ \\/__________/\\_______\\/     \n' +
+		'                                                                                           ',
+	'font-family:monospace; color: orange;'
+)

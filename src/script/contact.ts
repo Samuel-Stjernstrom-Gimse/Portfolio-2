@@ -22,7 +22,9 @@ type Square = {
 	color: string
 	num: number
 }
+
 const getRandomNumberInRange2 = (min: number, max: number) => Math.random() * (max - min) + min
+
 const getSquares = (maxHeight: number, color: string, array: any, num: number) => {
 	for (let i = 0; i < num; i++) {
 		const random = getRandomNumberInRange(0, 1) === 1
@@ -41,7 +43,7 @@ const getSquares = (maxHeight: number, color: string, array: any, num: number) =
 	}
 }
 
-function renderSquares(array: any) {
+const renderSquares = (array: any) => {
 	array.forEach((square: Square) => {
 		if (square.h === 0)
 			square.h = -getRandomNumberInRange(

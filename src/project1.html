@@ -11,14 +11,26 @@
 </head>
 <body>
 <div id="navbar">
-
-	<h1 id="name">samuel.dev</h1>
+	<a href="index.html"><h1 id="name">samuel.dev</h1></a>
 	<div id="menu">
-		<a class="menu-nav" id="projects-nav" href=""><h3>projects</h3></a>
-		<a class="menu-nav" id="about-nav" href=""><h3>about</h3></a>
-		<a  href="" id="git-hub-logo-nav"><img class="logo-nav" src="assets/images/navbar/git-hub.svg" alt=""></a>
-		<a id="linkedin-logo-nav" href=""><img class="logo-nav" src="assets/images/navbar/linkedin.svg" alt=""></a>
-		<a id="mail-logo-nav"  href=""><img class="logo-nav" src="assets/images/navbar/mail-logo.svg" alt=""></a>
+		<a class="menu-nav" id="projects-nav" href="../index.html">
+			<h3>projects</h3>
+		</a>
+		<a class="menu-nav" id="about-nav" href="../index.html#section1">
+			<h3>about</h3>
+		</a>
+		<a class="menu-nav" id="tech-stack-nav" href="../index.html#section2">
+			<h3>tech stack</h3>
+		</a>
+		<a href="https://github.com/SamuelKodehode" id="git-hub-logo-nav">
+			<img class="logo-nav" src="assets/images/navbar/git-hub.svg" alt="">
+		</a>
+		<a id="linkedin-logo-nav" href="https://www.linkedin.com/in/samuel-stjernstr%C3%B8m-gimse-a098b11b4/">
+			<img class="logo-nav" src="assets/images/navbar/linkedin.svg" alt="">
+		</a>
+		<a id="mail-logo-nav" href=mailto:samuel.kodehode@gmail.com>
+			<img class="logo-nav" src="assets/images/navbar/mail-logo.svg" alt="">
+		</a>
 	</div>
 </div>
 <section id="hero-section">
@@ -28,28 +40,47 @@
 			<h3>back to projects</h3>
 		</div>
 	</a>
-
-
-	<h1 id="project-title"> AtomSim </h1>
-
+	<h1 id="project-title"> MATH CUBE</h1>
 	<div class="vignette" id="vignette-top"></div>
 	<div class="vignette" id="vignette-bottom"></div>
-
 </section>
 <section id="project-info">
-	<img id="project-showcase" src="assets/images/projects/atom-mock.svg" alt="">
+	<img id="project-showcase" src="assets/images/projects/cube-mock.svg" alt="">
 	<div id="text">
 		<div class="text-wrapper" id="project-info-header">
-			<h2 id="project-info-title">AtomSim</h2>
-			<p id="project-intro">	Experience the mesmerizing world of particle dynamics with my Particle Simulation Project. This real-time simulation harnesses the power of HTML, CSS, and TypeScript to bring you an interactive showcase of particles influenced by a variety of forces and interactions. Dive into a visually stunning and educational experience.</p>
+			<h2 id="project-info-title">MATH CUBE</h2>
+			<p id="project-intro"> The "3D Cube Calculator and Animator" is an interactive web application that allows
+				users to explore the
+				visual representation of cubes based on user-defined factors. Developed using HTML, CSS, and JavaScript,
+				this project seamlessly combines mathematical calculations with dynamic animations to create an engaging
+				and educational experience.</p>
 		</div>
 		<div class="text-wrapper">
 			<h2>Key Features</h2>
 			<div id="key-features">
-				<p class="feature"><strong>Interactive Particle Simulation:</strong> Witness real-time simulation of particles responding to different forces and interactions.</p>
-				<p class="feature"><strong>User-Defined Forces:</strong> Customize the forces acting on particles and observe their dynamic responses.</p>
-				<p class="feature"><strong>Colorful Visualization:</strong> Enjoy a visually engaging experience with customizable particle colors.</p>
-				<p class="feature"><strong>Responsive Design:</strong> The simulation adapts seamlessly to various screen sizes, providing a consistent experience.</p>
+				<p class="feature">
+					<strong>Interactive Cube Rendering:</strong>
+					Users can input a numeric factor, and the application dynamically renders a 3D cube with each face
+					displaying a grid corresponding to the factor's value.
+					The cube's size and visual representation adapt instantly to user input.
+				</p>
+				<p class="feature">
+					<strong>Color Customization:</strong>
+					The application provides a color picker interface, allowing users to customize the colors of the
+					cube faces. This feature enhances the visual appeal and personalization of the 3D cube.
+				</p>
+				<p class="feature">
+					<strong> Rotation and Animation:</strong>
+					Users can manipulate the cube's rotation along the X and Y axes using dedicated buttons. The cube
+					smoothly transitions between rotations, providing an animated and immersive experience.
+					Additionally, users can control the rotation speed to observe the cube from different perspectives.
+				</p>
+				<p class="feature">
+					<strong>Error Handling:</strong>
+					To ensure a smooth user experience, the application includes error handling. If the user enters an
+					invalid factor outside the specified range, an error message is displayed, guiding them to input a
+					valid numeric value.
+				</p>
 			</div>
 			<div id="tech-stack-section">
 				<div>
@@ -65,18 +96,23 @@
 					<h4>HTML</h4>
 				</div>
 				<div>
-						<a href="https://github.com/SamuelKodehode/Atom-Simulation"><img class="tech-logo" src="assets/images/projects/tech-stack/mdi_github.svg" alt="">
+					<a href="https://github.com/SamuelKodehode/WizCube">
+						<img class="tech-logo" src="assets/images/projects/tech-stack/mdi_github.svg" alt="">
 						<h4>GitHub Repository</h4>
-						</a>
+					</a>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
 </section>
-<iframe id="iframe" src="https://samuelkodehode.github.io/Atom-Simulation/" frameborder="0"></iframe>
-
-
+<iframe id="iframe" src="https://samuelkodehode.github.io/WizCube/" frameborder="0"></iframe>
+<div id="footer">
+	<a href="project2.html">
+		<div id="next-project">
+			<h2>CRYPTO TRADER</h2>
+			<img id="next-project-img" src="assets/images/projects/back-arrow.png" alt="Next Project Arrow">
+		</div>
+	</a>
+</div>
 </body>
 </html>
