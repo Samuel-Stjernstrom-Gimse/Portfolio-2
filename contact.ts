@@ -57,14 +57,14 @@ function renderSquares(array: any) {
 		if (!square.up) square.h += getRandomNumberInRange2(0.01, 0.2)
 		ctx2.fillStyle = square.color
 
-		ctx2.fillRect(square.x, square.y, canvas2.width / square.num, square.h)
+		ctx2.fillRect(square.x, square.y, canvas2.width / square.num + 2, square.h)
 	})
 }
-getSquares(12, 'rgb(188,188,188)', squareArrayLayer1, 20)
-getSquares(8, 'rgb(109,109,109)', squareArrayLayer2, 20)
-getSquares(7, 'rgb(62,60,60)', squareArrayLayer3, 20)
-getSquares(6, 'rgb(44,43,43)', squareArrayLayer4, 20)
-getSquares(5, 'rgb(19,19,19)', squareArrayLayer5, 20)
+getSquares(8, 'rgb(229, 229, 229)', squareArrayLayer1, 20)
+getSquares(7, 'rgb(109,109,109)', squareArrayLayer2, 20)
+getSquares(6, 'rgb(62,60,60)', squareArrayLayer3, 20)
+getSquares(5, 'rgb(44,43,43)', squareArrayLayer4, 20)
+getSquares(4, 'rgb(19,19,19)', squareArrayLayer5, 20)
 
 const squareAnimationLoop = () => {
 	ctx2.clearRect(0, 0, canvas2.width, canvas2.height)

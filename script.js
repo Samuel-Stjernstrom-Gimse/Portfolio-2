@@ -30,8 +30,10 @@ const animationLoop = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     starArray.forEach((star) => {
         const distance = calculateDistance(star.x, star.y, mouseX, mouseY);
-        ctx.fillStyle = 'rgb(160,160,160)';
-        ctx.fillRect(star.x, star.y, 3, 3);
+        ctx.fillStyle = 'rgb(229, 229, 229)';
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, 3, 0, 2 * Math.PI);
+        ctx.fill();
         if (distance < 60) {
             if (star.x > mouseX) {
                 star.velocityX += 0.1;
