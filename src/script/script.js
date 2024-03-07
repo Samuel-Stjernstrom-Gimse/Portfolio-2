@@ -32,7 +32,7 @@ const animationLoop = () => {
         const distance = calculateDistance(star.x, star.y, mouseX, mouseY);
         ctx.fillStyle = 'rgb(229, 229, 229)';
         ctx.beginPath();
-        ctx.arc(star.x, star.y, 3, 0, 2 * Math.PI);
+        ctx.arc(star.x, star.y, 2, 0, 2 * Math.PI);
         ctx.fill();
         if (distance < 60) {
             if (star.x > mouseX) {
@@ -91,4 +91,13 @@ const animationLoop = () => {
 };
 getStars();
 animationLoop();
+function applyRandomAnimation() {
+    const elements = document.querySelectorAll('.logos-img');
+    elements.forEach((element) => {
+        const randomDelay = Math.random() * 10;
+        element.style.animationDelay = `${randomDelay}s`;
+        element.classList.add('floatSpaceSubtle');
+    });
+}
+window.onload = applyRandomAnimation;
 //# sourceMappingURL=script.js.map

@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: Arial, serif;
-    color: #E5E5E5FF;
 }
 
 :root{
@@ -25,18 +24,38 @@ body{
 /*-------------------ANIMATIONS-----------------------------------*/
 @keyframes floatSpace {
     20% {
-        transform: scale(1.1) translateX(-1%);
+        transform: scale(1.039) translateX(-1%);
         rotate: 4deg;
     }
     40% {
-        transform: scale(0.9) translateX(4%);
+        transform: scale(0.97) translateX(2%);
     }
     60% {
-        transform: scale(1.1) translateX(-4%);
+        transform: scale(1.039) translateX(-1%);
         rotate: -4deg;
     }
     80% {
-        transform: scale(0.9) translateX(4%);
+        transform: scale(0.9897) translateX(2%);
+    }
+    100% {
+
+    }
+}
+
+@keyframes floatSpaceSubtle {
+    20% {
+        transform:  translateX(-2.30%) translateY(-2.30%);
+        rotate: 1deg;
+    }
+    40% {
+        transform:  translateX(4.60%) translateY(4.60%);
+    }
+    60% {
+        transform:  translateX(-2.30%) translateY(-2.30%);
+        rotate: -2deg;
+    }
+    80% {
+        transform:  translateX(4.60%) translateY(4.60%);
     }
     100% {
 
@@ -87,7 +106,6 @@ body{
 .project-text:hover{
     transition: 0.2s;
     transform: rotateY(10deg);
-    color: white;
 }
 
 
@@ -154,6 +172,12 @@ p{
     width: 35rem;
 }
 
+#about-text-section{
+    padding-top: 6rem;
+    display: flex;
+    align-items: center;
+}
+
 #about-transition{
     position: absolute;
     top: 0;
@@ -182,7 +206,7 @@ p{
 }
 
 #man{
-    max-width: 40vw;
+    max-width: 50vw;
     animation: floatSpace 20s infinite linear;
     transition: 0.3s;
 }
@@ -227,6 +251,11 @@ p{
 
     height: 4rem;
 }
+.floatSpaceSubtle {
+    animation: floatSpaceSubtle 10s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
 .logos-img:hover{
     filter: drop-shadow(0 0 2rem turquoise);
@@ -241,13 +270,7 @@ p{
 
 
 /*---------------------------CONTACT-----------------------------------*/
-#section3{
-    position: relative;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    width: 100vw;
-}
+
 
 #contact-canvas{
     position: absolute;
@@ -257,11 +280,12 @@ p{
     image-rendering: crisp-edges;
 }
 
-#contact-title{
-    bottom: 0;
-    font-size: 3rem;
-    margin-bottom: 8rem;
+#footer{
+    height: 3rem;
+    background-color: #cccaca;
 }
+
+
 
 
 

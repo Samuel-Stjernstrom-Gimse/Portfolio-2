@@ -52,9 +52,8 @@ const animationLoop = () => {
 
 		ctx.fillStyle = 'rgb(229, 229, 229)'
 		ctx.beginPath()
-		ctx.arc(star.x, star.y, 3, 0, 2 * Math.PI)
+		ctx.arc(star.x, star.y, 2, 0, 2 * Math.PI)
 		ctx.fill()
-		//ctx.fillRect(star.x, star.y, 3, 3)
 
 		if (distance < 60) {
 			if (star.x > mouseX) {
@@ -111,5 +110,18 @@ const animationLoop = () => {
 
 	requestAnimationFrame(animationLoop)
 }
+
 getStars()
 animationLoop()
+function applyRandomAnimation() {
+	const elements: NodeListOf<HTMLImageElement> = document.querySelectorAll('.logos-img')
+
+	elements.forEach((element: HTMLImageElement) => {
+		const randomDelay: number = Math.random() * 10 // Adjust the range of delay as needed
+		element.style.animationDelay = `${randomDelay}s`
+		element.classList.add('floatSpaceSubtle')
+	})
+}
+
+// Apply the random animation delays on page load
+window.onload = applyRandomAnimation
