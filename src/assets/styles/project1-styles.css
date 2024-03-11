@@ -45,6 +45,14 @@ a, a:hover, a:focus, a:active {
 ::-webkit-scrollbar{
     display: none;
 }
+@media (max-width: 768px) {
+    #menu{
+        flex-direction: row;
+        font-size: 0.7rem;
+        max-width: 100vw;
+    }
+
+}
 
 /*---------------------------------hero---------------------------------------*/
 
@@ -98,10 +106,15 @@ a, a:hover, a:focus, a:active {
     height: 30px;
     width: 30px;
 }
+@media (max-width: 768px) {
+    #project-title{
+        font-size: 2rem;
+    }
+}
 
 /*------------------------------------project-info-----------------------------------*/
 
-#project-info{
+#project-info {
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -109,6 +122,16 @@ a, a:hover, a:focus, a:active {
     padding: 5% 20%;
     gap: 3rem;
     background-color: #cccaca;
+
+}
+@media (max-width: 768px) {
+    #project-info{
+        flex-direction: column;
+        padding: 1% 3% ;
+    }
+    #back-arrow{
+        visibility: hidden;
+    }
 }
 
 #text{
@@ -119,6 +142,7 @@ a, a:hover, a:focus, a:active {
 #project-showcase{
     height: 70vh;
 }
+
 #key-features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -133,10 +157,12 @@ a, a:hover, a:focus, a:active {
     padding: 4px;
     font-weight: lighter;
  }
+
 h2{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 .feature{
     padding: 15px;
     background-color: rgba(9, 9, 9, 0.63);
@@ -163,6 +189,15 @@ h2{
 .tech-logo:hover{
     scale: 1.1;
     transition: 0.1s;
+}
+
+.tech-div{
+    gap: 3px;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 /*-------------iframe-----------------*/
@@ -193,4 +228,10 @@ h2{
     height: 4rem;
     rotate: 180deg;
     margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    #next-project{
+        font-size: 1rem;
+    }
 }

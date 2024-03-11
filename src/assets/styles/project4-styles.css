@@ -45,6 +45,12 @@ a, a:hover, a:focus, a:active {
 ::-webkit-scrollbar{
     display: none;
 }
+@media (max-width: 768px) {
+    #menu{
+        flex-direction: row;
+        font-size: 0.7rem;
+    }
+}
 
 /*---------------------------------hero---------------------------------------*/
 
@@ -98,6 +104,12 @@ a, a:hover, a:focus, a:active {
 #arrow-img{
     height: 30px;
     width: 30px;
+}
+
+@media (max-width: 768px) {
+    #project-title{
+        font-size: 2rem;
+    }
 }
 
 /*------------------------------------project-info-----------------------------------*/
@@ -166,6 +178,24 @@ h2{
     transition: 0.1s;
 }
 
+.tech-div{
+    gap: 3px;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    #project-info{
+        flex-direction: column;
+        padding: 1% 3% ;
+    }
+    #back-arrow{
+        visibility: hidden;
+    }
+}
+
 /*-------------iframe-----------------*/
 #iframe{
     border: none;
@@ -194,4 +224,9 @@ h2{
     height: 4rem;
     rotate: 180deg;
     margin-right: 30px;
+}
+@media (max-width: 768px) {
+    #next-project{
+        font-size: 1rem;
+    }
 }

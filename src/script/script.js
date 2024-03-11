@@ -19,7 +19,8 @@ const getStars = () => {
             x: getRandomNumberInRange(0, window.innerWidth),
             y: getRandomNumberInRange(0, window.innerHeight),
             velocityX: 0,
-            velocityY: 0
+            velocityY: 0,
+            size: 2
         };
         starArray.push(star);
         originalStarArray.push(star);
@@ -29,9 +30,10 @@ const animationLoop = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     starArray.forEach((star) => {
         const distance = calculateDistance(star.x, star.y, mouseX, mouseY);
+        star.size = 2 + Math.abs(star.velocityX) * 2 + Math.abs(star.velocityY) * 2;
         ctx.fillStyle = 'rgb(229, 229, 229)';
         ctx.beginPath();
-        ctx.arc(star.x, star.y, 2, 0, 2 * Math.PI);
+        ctx.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
         ctx.fill();
         if (distance < 60) {
             if (star.x > mouseX) {
