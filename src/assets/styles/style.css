@@ -133,7 +133,8 @@ body {
     .project-text {
         /* Adjustments for smaller screens */
         transform: rotateY(0); /* Less dramatic initial rotation */
-        font-size: 1.2rem; /* Adjust font size if necessary */
+        font-size: 2rem; /* Adjust font size if necessary */
+        overflow-wrap:break-word ;
     }
 }
 
@@ -271,6 +272,14 @@ p {
     #profile-pic-img{
         width: 80vw;
     }
+}
+
+#cv{
+    color: black;
+}
+
+#cv:hover {
+
 }
 
 /*------------------techStack---------------*/

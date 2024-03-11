@@ -112,6 +112,29 @@ a, a:hover, a:focus, a:active {
     }
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes upDownAnimation {
+    from {transform: translateY(0%)}
+    to {transform: translateY(-100%)}
+}
+
+#down-arrow {
+    -webkit-animation: upDownAnimation linear 1s; /* Safari and Chrome */
+    animation: upDownAnimation linear 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 2rem;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+}
+
+
 /*------------------------------------project-info-----------------------------------*/
 
 #project-info {
