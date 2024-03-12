@@ -1,5 +1,5 @@
 import { getRandomNumberInRange } from './script.js';
-function main() {
+const main = () => {
     const canvas2 = document.getElementById('contact-canvas');
     const ctx2 = canvas2.getContext('2d');
     const squareArrayLayer1 = [];
@@ -60,9 +60,9 @@ function main() {
         requestAnimationFrame(squareAnimationLoop);
     };
     squareAnimationLoop();
-}
+};
 main();
 window.addEventListener('resize', () => {
     main();
 });
-//# sourceMappingURL=contact.js.map
+//# sourceMappingURL=layeredSteps.js.map

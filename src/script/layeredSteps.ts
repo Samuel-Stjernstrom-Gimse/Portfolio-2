@@ -1,6 +1,6 @@
 import { getRandomNumberInRange } from './script.js'
 
-function main() {
+const main = (): void => {
 	const canvas2 = document.getElementById('contact-canvas') as HTMLCanvasElement
 	const ctx2 = canvas2.getContext('2d') as CanvasRenderingContext2D
 	const squareArrayLayer1: Square[] = []
@@ -26,9 +26,10 @@ function main() {
 
 	const getRandomNumberInRange2 = (min: number, max: number) => Math.random() * (max - min) + min
 
-	const getSquares = (maxHeight: number, color: string, array: any, num: number) => {
-		for (let i = 0; i < num; i++) {
-			const random = getRandomNumberInRange(0, 1) === 1
+	const getSquares = (maxHeight: number, color: string, array: any, num: number): void => {
+		for (let i: number = 0; i < num; i++) {
+			const random: boolean = getRandomNumberInRange(0, 1) === 1
+
 			const square: Square = {
 				x: (canvas2.width / num) * i,
 				y: canvas2.height,
@@ -44,22 +45,24 @@ function main() {
 		}
 	}
 
-	const renderSquares = (array: any) => {
-		array.forEach((square: Square) => {
+	const renderSquares = (array: any): void => {
+		array.forEach((square: Square): void => {
 			if (square.h === 0)
 				square.h = -getRandomNumberInRange(
 					canvas2.height / (square.maxHeightDivider + 2),
 					canvas2.height / square.maxHeightDivider
 				)
+
 			if (square.h < -canvas2.height / square.maxHeightDivider) {
 				square.up = false
 			} else if (square.h > -canvas2.height / (square.maxHeightDivider + 1)) {
 				square.up = true
 			}
+
 			if (square.up) square.h += getRandomNumberInRange2(-0.2, -0.01)
 			if (!square.up) square.h += getRandomNumberInRange2(0.01, 0.2)
-			ctx2.fillStyle = square.color
 
+			ctx2.fillStyle = square.color
 			ctx2.fillRect(square.x, square.y, canvas2.width / square.num + 2, square.h)
 		})
 	}
@@ -70,7 +73,7 @@ function main() {
 	getSquares(4, 'rgb(44,43,43)', squareArrayLayer4, 20)
 	getSquares(3, 'rgb(19,19,19)', squareArrayLayer5, 20)
 
-	const squareAnimationLoop = () => {
+	const squareAnimationLoop = (): void => {
 		ctx2.clearRect(0, 0, canvas2.width, canvas2.height)
 
 		renderSquares(squareArrayLayer5)
@@ -81,10 +84,11 @@ function main() {
 
 		requestAnimationFrame(squareAnimationLoop)
 	}
-
 	squareAnimationLoop()
 }
+
 main()
-window.addEventListener('resize', () => {
+
+window.addEventListener('resize', (): void => {
 	main()
 })

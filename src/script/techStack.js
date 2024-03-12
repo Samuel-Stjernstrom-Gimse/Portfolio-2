@@ -15,4 +15,4 @@ logos.forEach((logo, index) => {
             logoDiv[index].style.visibility = 'hidden';
     });
 });
-//# sourceMappingURL=stack.js.map
+//# sourceMappingURL=techStack.js.map

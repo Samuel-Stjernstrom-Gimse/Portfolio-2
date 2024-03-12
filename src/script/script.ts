@@ -1,5 +1,4 @@
 let starArray: Star[] = []
-let originalStarArray: any[] = []
 
 const canvas = document.getElementById('canvas') as HTMLCanvasElement
 const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
@@ -23,17 +22,15 @@ type Star = {
 	size: number
 }
 
-window.addEventListener('mousemove', function (event) {
-	// Get the position of the canvas relative to the viewport
-	const canvasRect = canvas.getBoundingClientRect()
+window.addEventListener('mousemove', function (event: MouseEvent): void {
+	const canvasRect: DOMRect = canvas.getBoundingClientRect()
 
-	// Calculate the mouse position relative to the canvas
 	mouseX = event.clientX - canvasRect.left
 	mouseY = event.clientY - canvasRect.top
 })
 
-const getStars = () => {
-	for (let i = 0; i < 100; i++) {
+const getStars = (): void => {
+	for (let i: number = 0; i < 100; i++) {
 		let star: Star = {
 			x: getRandomNumberInRange(0, window.innerWidth),
 			y: getRandomNumberInRange(0, window.innerHeight),
@@ -42,15 +39,14 @@ const getStars = () => {
 			size: 2
 		}
 		starArray.push(star)
-		originalStarArray.push(star)
 	}
 }
 
-const animationLoop = () => {
+const animationLoop = (): void => {
 	ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-	starArray.forEach((star: Star) => {
-		const distance = calculateDistance(star.x, star.y, mouseX, mouseY)
+	starArray.forEach((star: Star): void => {
+		const distance: number = calculateDistance(star.x, star.y, mouseX, mouseY)
 
 		star.size = 2 + Math.abs(star.velocityX) * 2 + Math.abs(star.velocityY) * 2
 
@@ -111,23 +107,23 @@ const animationLoop = () => {
 			star.velocityY += 0.01
 		}
 	})
-
 	requestAnimationFrame(animationLoop)
 }
 
 getStars()
 animationLoop()
-function applyRandomAnimation() {
+
+function applyRandomAnimation(): void {
 	const elements: NodeListOf<HTMLImageElement> = document.querySelectorAll('.logos-img')
 
-	elements.forEach((element: HTMLImageElement) => {
-		const randomDelay: number = Math.random() * 10 // Adjust the range of delay as needed
+	elements.forEach((element: HTMLImageElement): void => {
+		const randomDelay: number = Math.random() * 10
+
 		element.style.animationDelay = `${randomDelay}s`
 		element.classList.add('floatSpaceSubtle')
 	})
 }
 
-// Apply the random animation delays on page load
 window.onload = applyRandomAnimation
 
 console.log(

@@ -1,5 +1,4 @@
 let starArray = [];
-let originalStarArray = [];
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let mouseY = 0;
@@ -23,7 +22,6 @@ const getStars = () => {
             size: 2
         };
         starArray.push(star);
-        originalStarArray.push(star);
     }
 };
 const animationLoop = () => {
