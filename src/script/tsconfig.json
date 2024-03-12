@@ -5,7 +5,7 @@
       "ESNext",
       "DOM"
     ],
-    "outDir": "./",
+    "outDir": "./js", // Set the output directory to "js"
     "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
@@ -18,5 +18,5 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
