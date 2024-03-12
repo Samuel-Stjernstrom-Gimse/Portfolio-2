@@ -27,7 +27,7 @@ body {
     display: none;
 }
 
-/*-------------------ANIMATIONS-----------------------------------*/
+/* ---| Animations |------------------------------------------------------------------------------------------------ */
 
 @keyframes floatSpace {
     20% {
@@ -180,7 +180,7 @@ p {
     opacity: 0.7;
 }
 
-/*------------------about--------------------------------*/
+/* ---| ABOUT |----------------------------------------------------------------------------------------------------- */
 
 #section1 {
     position: relative;
@@ -243,6 +243,7 @@ p {
     gap: 1rem;
     cursor: pointer;
 }
+
 .about-contact:hover{
     opacity: 0.7;
 }
@@ -264,11 +265,13 @@ p {
         gap: 0;
 
     }
+
     #about-text{
         margin: 0;
         width: 80vw;
         padding: 40px;
     }
+
     #profile-pic-img{
         width: 80vw;
     }
@@ -278,11 +281,31 @@ p {
     color: black;
 }
 
-#cv:hover {
-
+@keyframes upDownAnimation {
+    from {transform: translateY(-2%)}
+    to {transform: translateY(-50%)}
 }
 
-/*------------------techStack---------------*/
+#black-arrow {
+    -webkit-animation: upDownAnimation linear 1s;
+    animation: upDownAnimation linear 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 2rem;
+}
+
+#black-arrow-div{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100vw;
+}
+
+/* ---| TECH STACK |------------------------------------------------------------------------------------------------- */
 
 #section2 {
     position: relative;
@@ -317,7 +340,6 @@ p {
 }
 
 .logos {
-
     height: 3rem;
 }
 
@@ -348,7 +370,6 @@ p {
 }
 
 .logos-img {
-
     height: 4rem;
 }
 
@@ -374,8 +395,24 @@ p {
     }
 }
 
+#black-arrow-2 {
+    -webkit-animation: upDownAnimation linear 1s;
+    animation: upDownAnimation linear 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 2rem;
+}
 
-/*---------------------------CONTACT-----------------------------------*/
+#black-arrow-div-2{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 1%;
+    width: 100vw;
+}
 
 #contact-canvas {
     position: absolute;

@@ -9,14 +9,15 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
-/*----------------------------------animation------------------------------------*/
+
+/* ---| ANIMATIONS |------------------------------------------------------------------------------------------------- */
 
 @keyframes vignette {
     from {height: 60vh;}
     to {height: 20vh;}
 }
 
-/*------------------------------navbar-----------------------------------------------*/
+/* ---| NAVBAR |----------------------------------------------------------------------------------------------------- */
 
 #navbar {
     color: ghostwhite;
@@ -54,7 +55,7 @@ a, a:hover, a:focus, a:active {
 
 }
 
-/*---------------------------------hero---------------------------------------*/
+/* ---| HERO |------------------------------------------------------------------------------------------------------- */
 
 #hero-section{
     position: relative;
@@ -106,6 +107,7 @@ a, a:hover, a:focus, a:active {
     height: 30px;
     width: 30px;
 }
+
 @media (max-width: 768px) {
     #project-title{
         font-size: 2rem;
@@ -123,7 +125,7 @@ html {
 }
 
 #down-arrow {
-    -webkit-animation: upDownAnimation linear 1s; /* Safari and Chrome */
+    -webkit-animation: upDownAnimation linear 1s;
     animation: upDownAnimation linear 1s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
@@ -135,7 +137,7 @@ html {
 }
 
 
-/*------------------------------------project-info-----------------------------------*/
+/* ---| PROJECT INFO |----------------------------------------------------------------------------------------------- */
 
 #project-info {
     width: 100vw;
@@ -223,7 +225,7 @@ h2{
     align-items: center;
 }
 
-/*-------------iframe-----------------*/
+/* ---| IFRAME |--------------------------------------------------------------------------------------------------- */
 #iframe{
     border: none;
     width: 100vw;
@@ -232,7 +234,8 @@ h2{
     z-index: -3;
 }
 
-/*-------------footer--------------*/
+/* ---| FOOTER |--------------------------------------------------------------------------------------------------- */
+
 #footer{
     position: relative;
 }

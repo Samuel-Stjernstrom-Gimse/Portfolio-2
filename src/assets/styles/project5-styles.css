@@ -9,14 +9,15 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
-/*----------------------------------animation------------------------------------*/
+
+/* ---| ANIMATIONS |--------------------------------------------------------------------------------------------- */
 
 @keyframes vignette {
     from {height: 60vh;}
     to {height: 20vh;}
 }
 
-/*------------------------------navbar-----------------------------------------------*/
+/* ---| NAVBAR |------------------------------------------------------------------------------------------------- */
 
 #navbar {
     color: ghostwhite;
@@ -34,17 +35,18 @@ a, a:hover, a:focus, a:active {
     gap: 20px;
 }
 
-#name{
+#name {
     font-size: 3rem;
 }
 
-.logo-nav{
+.logo-nav {
     width: 1.5rem;
 }
 
 ::-webkit-scrollbar{
     display: none;
 }
+
 @media (max-width: 768px) {
     #menu{
         flex-direction: row;
@@ -52,7 +54,7 @@ a, a:hover, a:focus, a:active {
     }
 }
 
-/*---------------------------------hero---------------------------------------*/
+/* ---| HERO |--------------------------------------------------------------------------------------------------- */
 
 #hero-section{
     position: relative;
@@ -70,11 +72,13 @@ a, a:hover, a:focus, a:active {
 #project-title{
     font-size: 8rem;
 }
+
 @media (max-width: 768px) {
     #project-title{
     font-size: 2rem;
     }
 }
+
 .vignette{
     width: 100vw;
     position: absolute;
@@ -127,7 +131,7 @@ html {
 }
 
 #down-arrow {
-    -webkit-animation: upDownAnimation linear 1s; /* Safari and Chrome */
+    -webkit-animation: upDownAnimation linear 1s;
     animation: upDownAnimation linear 1s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
@@ -138,7 +142,7 @@ html {
     left: 50%;
 }
 
-/*------------------------------------project-info-----------------------------------*/
+/* ---| PROJECTS-INFO |--------------------------------------------------------------------------------------------------- */
 
 #project-info{
     width: 100vw;
@@ -158,6 +162,7 @@ html {
 #project-showcase{
     height: 50vh;
 }
+
 #key-features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -172,10 +177,12 @@ html {
     padding: 4px;
     font-weight: lighter;
 }
+
 h2{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 .feature{
     padding: 15px;
     background-color: rgba(9, 9, 9, 0.63);
@@ -212,6 +219,7 @@ h2{
     text-align: center;
     align-items: center;
 }
+
 @media (max-width: 768px) {
     #project-info{
         flex-direction: column;
@@ -222,7 +230,8 @@ h2{
     }
 }
 
-/*-------------iframe-----------------*/
+/* ---| IFRAME |--------------------------------------------------------------------------------------------------- */
+
 #iframe{
     border: none;
     width: 100vw;
@@ -231,7 +240,8 @@ h2{
     z-index: -3;
 }
 
-/*-------------footer--------------*/
+/* ---| FOOTER |--------------------------------------------------------------------------------------------------- */
+
 #footer{
     position: relative;
 }
@@ -246,12 +256,12 @@ h2{
     font-weight: bolder;
 }
 
-
 #next-project-img{
     height: 4rem;
     rotate: 180deg;
     margin-right: 30px;
 }
+
 @media (max-width: 768px) {
     #next-project{
         font-size: 1rem;
