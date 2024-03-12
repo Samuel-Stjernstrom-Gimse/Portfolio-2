@@ -1,90 +1,38 @@
-
-
-# TypeScript Project Template Readme
+# Portfolio Readme
 
 ## Overview
 
-This TypeScript project template is designed to kickstart your TypeScript development with proper configuration for the TypeScript Compiler (`tsc`) and Prettier. Below, you'll find a brief explanation of the key configuration files and their purpose.
+This repository contains the code for my interactive portfolio, built entirely from scratch using TypeScript with a focus on custom implementations, avoiding external libraries.
 
-## Files
+### Layered Squares Canvas Animation
 
-### `tsconfig.json`
+1. **Canvas Animation:** Utilizes HTML5 Canvas for a visually appealing animation.
+2. **Layered Squares:** Divided into five layers of squares, each with its own color and movement pattern.
+3. **Responsiveness:** The animation adapts seamlessly to window resizing.
 
-The `tsconfig.json` file contains the configuration settings for the TypeScript Compiler (`tsc`). Here's a breakdown of the key options:
+### Interactive Stars/Balls
 
-- **target:** Specifies the ECMAScript target version (ESNext in this case).
-- **lib:** Defines the libraries to include during compilation (ESNext and DOM).
-- **outDir:** Specifies the output directory for compiled files.
-- **rootDir:** Indicates the root directory of TypeScript source files.
-- **strict:** Enables strict type-checking options.
-- **esModuleInterop:** Allows default imports from CommonJS modules.
-- **module:** Specifies the module system (ESNext in this case).
-- **removeComments:** Removes comments from the generated output.
-- **sourceMap:** Generates source map files for better debugging.
+1. **Dynamic Starfield:** Creates a dynamic starfield with interactive elements.
+2. **Mouse Interaction:** Stars respond to mouse movement, influencing their velocity and size.
+3. **Engaging Visual Effect:** Provides an interactive and visually pleasing experience.
 
-### `.prettierrc`
+## Instructions
 
-The `.prettierrc` file configures Prettier, a code formatter for maintaining consistent code style. Here's an overview of the configuration options:
+### Layered Squares Canvas Animation
 
-- **arrowParens:** Enforces parentheses around a sole arrow function parameter.
-- **bracketSameLine:** Ensures multiline object literals have the opening bracket on the same line.
-- **bracketSpacing:** Adds spaces between brackets in object literals.
-- **endOfLine:** Defines the line ending style (LF).
-- **jsxSingleQuote:** Uses single quotes for JSX attributes.
-- **printWidth:** Specifies the maximum line length before wrapping.
-- **semi:** Omits semicolons at the end of statements.
-- **useTabs:** Indents with tabs instead of spaces.
-- **trailingComma:** Controls trailing commas in object literals and arrays.
-- **tabWidth:** Sets the number of spaces per tab.
-- **singleQuote:** Uses single quotes instead of double quotes for strings.
-- **htmlWhitespaceSensitivity:** Defines sensitivity to HTML whitespace (strict).
+1. The animation is rendered on the `contact-canvas` element.
+2. The canvas size adapts to the window dimensions.
+3. Five layers of squares with different colors and movement patterns.
+4. Squares respond to window resizing.
 
-## Installation
+### Interactive Stars/Balls
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/your-project.git
-   ```
+1. Interactive stars/balls animation is rendered on the `canvas` element.
+2. Stars follow the mouse cursor, adjusting their velocity and size.
+3. Dynamic and engaging starfield effect.
 
-2. **Navigate to Project Directory:**
-   ```bash
-   cd your-project
-   ```
 
-3. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
+Dependencies
+No external dependencies are required.
 
-4. **Install Prettier:**
-   ```bash
-   npm install --save-dev prettier
-   ```
-
-## Usage
-
-1. **Run TypeScript Compiler (tsc):**
-    - To compile TypeScript files, run:
-      ```bash
-      npx tsc
-      ```
-
-2. **Watch Mode:**
-    - To run TypeScript Compiler in watch mode, use:
-      ```bash
-      npx tsc --watch
-      ```
-
-3. **Format Code with Prettier:**
-    - To format your code using Prettier, run:
-      ```bash
-      npm run format
-      ```
-
-## Additional Notes
-
-- Customize the `tsconfig.json` and `.prettierrc` files based on your project requirements.
-- Refer to the official [TypeScript Compiler Options documentation](https://www.typescriptlang.org/tsconfig) and [Prettier Configuration documentation](https://prettier.io/docs/en/configuration.html) for more details.
-
-Now your TypeScript project is ready for development with proper TypeScript and Prettier configurations. Happy coding!
-```
+Thank you for checking out my portfolio! 🚀
