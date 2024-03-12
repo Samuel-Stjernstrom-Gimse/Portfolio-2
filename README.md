@@ -31,20 +31,6 @@ This repository contains the code for my interactive portfolio, built entirely f
 2. Stars follow the mouse cursor, adjusting their velocity and size.
 3. Dynamic and engaging starfield effect.
 
-## Usage
-
-1. **Clone the Repository:**
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-Open in Browser:
-Open the index.html file in your web browser to view the portfolio.
-Developer Notes
-Language Used: TypeScript with strict mode.
-Custom Implementations: No external libraries used, focusing on building everything from scratch.
-Utility Functions: Common functionalities are modularized in the script.js file.
-TypeScript Strict Mode
-The portfolio is developed with TypeScript strict mode enabled, ensuring a more robust and error-free coding experience.
 
 Dependencies
 No external dependencies are required.
