@@ -248,3 +248,32 @@ h2{
         font-size: 1rem;
     }
 }
+
+@keyframes upDownAnimation {
+    from {transform: translateY(-2%)}
+    to {transform: translateY(-50%)}
+}
+
+#black-arrow {
+    -webkit-animation: upDownAnimation linear 1s;
+    animation: upDownAnimation linear 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 2rem;
+}
+
+#black-arrow-div{
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100vw;
+    left: 0;
+}
+
+#project-info {
+    position: relative;
+}
